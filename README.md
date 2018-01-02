@@ -115,8 +115,8 @@ oを押せばOK
 
 以下のような文章があった時にvitと打つとtag内部がvisualモードで選択される
 
-'''
+```
 <a href ="#">one</a>
 <a href ="#">two</a>
 <a href ="#">three</a>
-'''
+```
