@@ -35,6 +35,15 @@
 |/pattern\<CR\>|ドキュメント内で前方検索|n|N|
 |?pattern\<CR\>|ドキュメント内で後方検索|n|N|
 
+過去の検索履歴を出す場合は/を押した後に上や下の矢印キーを押す
+
+"\>" というのは特別なマーカーで、単語がここで終わっている時だけヒットします。
+同じように "\<" は単語の始まりにだけヒットします。つまり、"the" という単語だけ
+を探したい場合は、次のようにします。
+
+        /\<the\>
+
+検索結果をハイライト表示 :set hls or :set nohls
 ## 置換
 
 | key | description | 繰り返し | 逆方向への繰り返し |
@@ -120,3 +129,39 @@ oを押せばOK
 <a href ="#">two</a>
 <a href ="#">three</a>
 ```
+
+### オブジェクト単位の移動
+[{や]}や[[や]]で{や}や[や]へ移動できる。カーソルが{}[]の上にないときに便利
+
+### オブジェクト単位の選択
+aw
+iw
+aW
+iW
+as
+is
+ap
+ip
+a[
+a]
+i[
+i]
+
+#### 利用例
+        "dl"    1文字削除 ("x" と同じです)              dl
+        "diw"   inner word を削除                       diw
+        "daw"   a word を削除                           daw
+        "diW"   inner WORD を削除 (参照: WORD)        diW
+        "daW"   a WORD を削除 (参照: WORD)            daW
+        "dgn"   次に検索パターンにマッチするものを削除  dgn
+        "dd"    1行削除                                 dd
+        "dis"   inner sentence を削除                   dis
+        "das"   a sentence を削除                       das
+        "dib"   inner '(' ')' block を削除              dib
+        "dab"   a '(' ')' block を削除                  dab
+        "dip"   inner paragraph を削除                  dip
+        "dap"   a paragraph を削除                      dap
+        "diB"   inner '{' '}' Block を削除              diB
+        "daB"   a '{' '}' Block を削除                  daB
+
+the is there
