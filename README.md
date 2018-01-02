@@ -104,6 +104,19 @@ use case: \<C-o\>zz で、カーソルがいる行を画面中央に持ってく
 
 ## 簡単な計算を挿入モードで実行する
 
-| command | description | 
+| key | description | 
 |:---|:---|
 |\<C-r\>=6\*35\<CR\>|6 x 35の値を入力してくれる|
+
+## visualモードでの選択状態での端点の切り替え
+oを押せばOK
+
+## vitコマンド
+
+以下のような文章があった時にvitと打つとtag内部がvisualモードで選択される
+
+'''
+<a href ="#">one</a>
+<a href ="#">two</a>
+<a href ="#">three</a>
+'''
