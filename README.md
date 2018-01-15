@@ -43,7 +43,10 @@
 
         /\<the\>
 
+見えないtab等を表示 :set list
+
 検索結果をハイライト表示 :set hls or :set nohls
+
 ## 置換
 
 | key | description | 繰り返し | 逆方向への繰り返し |
